@@ -1,5 +1,5 @@
 {
-  "name": "holidays_api_01",
+  "name": "cao-holidays-json",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -14,7 +14,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/ibm-plex-sans-jp": "^5.3.1",
+    "@tailwindcss/vite": "^4.3.4",
     "astro": "^7.4.4",
-    "csv-parse": "^7.0.3"
+    "csv-parse": "^7.0.3",
+    "tailwindcss": "^4.3.4"
   }
 }

@@ -1,0 +1,23 @@
+---
+import type { GetStaticPaths } from 'astro';
+import HolidayJson from '../../components/HolidayJson.astro';
+import snapshot from '../../data/holidays.json';
+
+export const partial = true;
+
+export const getStaticPaths = (() => [
+  { params: { period: 'all' }, props: { holidays: snapshot.holidays } },
+  ...snapshot.metadata.years.map(year => ({
+    params: { period: year },
+    props: {
+      holidays: Object.fromEntries(
+        Object.entries(snapshot.holidays).filter(([date]) => date.startsWith(`${year}-`)),
+      ),
+    },
+  })),
+]) satisfies GetStaticPaths;
+
+const { holidays } = Astro.props;
+---
+
+<HolidayJson holidays={holidays} />
