@@ -2,9 +2,9 @@ name: Update holidays
 
 on:
   schedule:
-    # 日本時間で指定: 分 時 日 月 曜日。現在は毎年10月29日16時。
+    # 日本時間で指定: 分 時 日 月 曜日。現在は毎年3月15日16時。
     # 日時を変えるときはこのcronの数字を編集する。
-    - cron: '0 16 29 10 *'
+    - cron: '0 16 15 3 *'
       timezone: Asia/Tokyo
   workflow_dispatch:
     inputs:

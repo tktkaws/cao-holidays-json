@@ -16,12 +16,14 @@ const initialApiPath = `${base}/api/v1/${latestYear}/date.json`;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href={`${base}/favicon.ico`} sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} sizes="any" />
     <meta name="description" content="内閣府の祝日・休日データをJSONで取得できるAPIです。" />
-    <title>内閣府「国民の祝日」JSON</title>
+    <title>内閣府「国民の祝日」API</title>
   </head>
   <body class="min-h-screen bg-white font-sans text-base leading-relaxed text-black [color-scheme:light]">
     <main class="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-16">
-      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">内閣府「国民の祝日」JSON</h1>
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">内閣府「国民の祝日」API</h1>
       <p class="mt-5 text-lg leading-8 text-black sm:text-xl">内閣府の祝日・休日データをJSONで取得できます。</p>
       <section class="mt-10 min-w-0" aria-labelledby="format-title">
         <h2 id="format-title" class="text-xl font-bold sm:text-2xl">日付と名称のシンプルなJSON</h2>
@@ -40,7 +42,7 @@ const initialApiPath = `${base}/api/v1/${latestYear}/date.json`;
       <section class="mt-6 min-w-0" aria-labelledby="update-title">
         <h2 id="update-title" class="text-xl font-bold sm:text-2xl">データの自動更新</h2>
         <div class="mt-3 text-sm leading-7 text-black">
-          <p>毎年10月29日16時（日本時間）に、内閣府のCSVを取得する定期処理を設定しています。</p>
+          <p>毎年3月15日16時（日本時間）に、内閣府のCSVを取得する定期処理を設定しています。</p>
           <p>取得したデータの形式や翌年の祝日の収録を検証し、更新候補を自動で作成します。</p>
           <p>公開中のAPIには、更新内容の確認・マージと、ビルド・公開を行った後に反映されます。</p>
           <p>実際のデータ取得日時は、下の「データについて」で確認できます。</p>
