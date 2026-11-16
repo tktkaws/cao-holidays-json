@@ -104,7 +104,7 @@ npm run build
 
 ## 定期実行について
 
-`.github/workflows/update-holidays.yml` は、毎年10月29日16時（日本時間）にGitHub Actionsで実行する設定です。CSV取得後、テスト・ビルド・翌年の収録と生成JSONの確認に成功すると、`automation/update-holidays` ブランチに更新用プルリクエストを作成または更新します。変更がなくても取得日時は更新されます。いずれかの検証が失敗すればPRの作成・更新は行いません。
+`.github/workflows/update-holidays.yml` は、毎年3月15日16時（日本時間）にGitHub Actionsで実行する設定です。CSV取得後、テスト・ビルド・翌年の収録と生成JSONの確認に成功すると、`automation/update-holidays` ブランチに更新用プルリクエストを作成または更新します。変更がなくても取得日時は更新されます。いずれかの検証が失敗すればPRの作成・更新は行いません。
 
 利用するには、このワークフローをGitHubのデフォルトブランチに反映し、リポジトリの **Settings → Actions → General → Workflow permissions** で、Actionsによるプルリクエストの作成を許可してください。組織の制限やブランチ保護によっては追加の設定が必要です。ワークフローにはリポジトリの書き込みとPRの作成権限を指定しています。
 
@@ -115,7 +115,7 @@ npm run build
 ```yaml
 schedule:
   #        分 時 日 月 曜日
-  - cron: '0 16 29 10 *' # 毎年10月29日 16:00
+  - cron: '0 16 15 3 *' # 毎年3月15日 16:00
     timezone: Asia/Tokyo
 ```
 
